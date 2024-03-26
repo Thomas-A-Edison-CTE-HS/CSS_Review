@@ -1,0 +1,378 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.layout {
+  border: 2px green solid;
+  display: grid;
+  grid:
+    "span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12" 1fr "span6 span6 span6 span6 span6 span6 . . . . . ." 1fr ". . . . . span3 span3 span3 . . . ." 1fr ". . . . span1 . . . . . . ." 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.span12 {
+  grid-area: span12;
+}
+
+.span6 {
+  grid-area: span6;
+}
+
+.span3 {
+  grid-area: span3;
+}
+
+.span1 {
+  grid-area: span1;
+}
+
+
+.layout2 {
+  width: 90%;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  border: 2px solid pink;
+}
+
+
+.layout3 {
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "header header header" auto
+    "leftSide body rightSide" 1fr 
+    "footer footer footer" auto
+    / auto 1fr auto;
+
+  gap: 8px;
+}
+  .header {
+    grid-area: header;
+    background-color: #333355;
+  }
+
+  .leftSide {
+    grid-area: leftSide;
+    background-color: #4fad48;
+  }
+
+  .body {
+    grid-area: body;
+    background-color: #fd9b9b;
+  }
+
+  .rightSide {
+    grid-area: rightSide;
+    background-color: #9876d5;
+  }
+
+  .footer {
+    grid-area: footer;
+    background-color: #333355;
+  }
+}
+
+.layout4 {
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "sidebar body1" 1fr
+    / auto 1fr;
+  gap: 8px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #333355;
+}
+
+.body1 {
+  grid-area: body1;
+  background-color: #4fad48;
+}
+.layout5{
+  border: 2px purple solid;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "header1" auto
+  "main" 1fr
+  "footer1" auto
+  / 1fr;
+  gap: 8px;
+}
+.header1{
+  grid-area: header1;
+  background-color: #8383d8;
+}
+.main{
+  grid-area: main;
+  background-color: #ffa3a3;
+}
+.footer1{
+  grid-area: footer1;
+  background-color: #8383d8;
+}
+.layout6{
+  border: 2px purple solid;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.layout7{border:2px solid green;
+        width:100%;
+        display:grid;
+        grid-template-rows:repeat(auto-fit,1fr);
+        grid-template-columns:repeat(3,1fr);
+        gap:8px;}
+.col1Last1{grid-column:1/-1;
+          background-color:brown;}
+.layout8{border:2px solid green;
+         display:flex;
+         gap:16px;
+         flex-direction:row-reverse;}
+
+.layout9{border: 2px solid purple;
+         display:flex;
+         gap:16px;
+         flex-wrap:wrap;}
+
+.layout10{border:2px solid purple;
+          display:flex;
+        gap:16px; }
+.grow1{flex-grow: 1;
+      background-color:grey;}
+.layout11{border: 2px solid purple;
+display:flex;
+         gap:16px;
+         }
+
+.layout12{border: 2px solid purple;
+         display:flex;
+                  gap:16px;}
+.marginLeft{margin-left:auto;}
+.layout13{
+border: 2px solid purple;
+display:flex;
+gap: 16px;
+flex-wrap: nowrap;
+justify-content: flex-start;
+align-content: flex-start;
+align-items: flex-start;
+}
+  #twoD{
+    border: 3px dashed #e68495;
+    background-color: #ff425b;
+  }
+
+
+  /* Translate Method*/
+  .trans:hover{
+    transform: translate(50px, 100px);
+  }
+
+
+  /* Translate X Method*/
+  .transX:hover{
+    transform: translateX(50px);
+  }
+
+
+  /* Translate Y Method*/
+  .transY:hover{
+    transform: translateY(100px);
+  }
+
+
+  /* Rotate Method */
+  #rotate:hover{
+    transform: rotate(20deg);
+  }
+
+
+
+  /* Scale Method */
+  #scale:hover{
+    transform:scale(2,3)
+  }
+
+
+  /* Scale X Method */
+  #scaleX:hover{
+    transform:scaleX(2)
+  }
+
+
+  /* Scale Y Method */
+  #scaleY:hover{
+    transform:scaleY(3)
+  }
+
+
+  /* Skew Method */
+  #skew:hover{
+    transform: skew(20deg, 20deg);
+  }
+
+
+  /* Skew X Method */
+  #skewX:hover{
+    transform:skewX(20deg);
+  }
+
+
+  /* Skew Y Method */
+  #skewY:hover{
+    transform:skewY(20deg);
+  }
+
+
+  /* Matrix Method */
+  /* matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) */
+  #matrix:hover{
+    transform: matrix(2, -0.7, 3, 2, 3, 1);
+  }
+  #matrix2:hover{
+    transform: matrix(1, 0, 1, 0.6, 1, 0);
+  }
+  #yourOwnMatrix:hover{
+    transform: yourOwnMat(1, 10, 0.5, 1, 0, 0);
+  }
+
+
+
+  #threeD{
+    border: 3px dotted #4fb54f;
+    background-color: #6fa441;
+  }
+  /* 3D Animations, X, Y, Z axis */
+
+
+
+  /* Translate 3D Method*/
+  #trans3D:hover{
+    transform: translate3d(50px, 10px, 150px);
+  }
+
+
+  /* Rotate 3D Method */
+  /* Rotate Z Method */
+  #rotateZ:hover{
+    transform: rotateZ(90deg);
+  }
+
+
+
+  /* 
+  transition
+  transition-delay
+  transition-duration
+  transition-property
+  transition-timing-function 
+  */
+  #transitions{
+    border: 3px solid #8c55c3;
+    background-color: #59a19a;
+  }
+
+  .box1{
+    width: 50px;
+    height: 50px;
+    background-color: #e0e090;
+    border: 1px solid #919159;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  }
+
+  #transition:hover{
+    width: 100px;
+    height: 100px;
+    background-color: #9f3c3c;
+  }
+
+  #delay{
+    transition: width 2s;
+    transition-delay: 1s;
+  }
+  #delay:hover{
+    width: 100px;
+  }
+
+  #duration{
+    transition: background-color 4s;
+    transition-duration: 4s;
+  }
+  #duration:hover{
+    background-color: lightpink;
+  }
+
+  #propert{
+    transition-property: width;
+  }
+  #propert:hover{
+    width: 100px;
+  }
+
+  #timing{
+    transition-timing-function: ease-in;
+  }
+  #timing:hover{
+    width: 100px;
+  }
+
+
+
+
+
+
+
+
+  #animations{
+    background-color: #c49292;
+    border: 3px dashed #72a12b;
+  }
+
+  #animate{
+    animation-name: example;
+    animation-duration: 10s;  
+  }
+  @keyframes example{
+    from{background-color: #f1ffa8;}
+    to{background-color: #8049ee;}
+  }
+
+  #animate2{
+    animation-name: sample;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes sample{
+    0%{background-color: #ffa8a8;}
+    25%{background-color: #9c49ee;}
+    50%{background-color: #2954ff;}
+    75%{background-color: #419b42;}
+    100%{background-color: #a8ffd7;}
+  }
+
+  #animate3{
+    position: relative;
+    animation-name: allOver;
+    animation-duration: 2s;
+    animation-iteration-count: 20;
+  }
+  @keyframes allOver{
+    0%{background-color: #ffa8a8; left: 0px; top: 0px}
+    25%{background-color: #9c49ee; left: 200px; top: 0px}
+    50%{background-color: #2954ff; left: 0px; top: 0px}
+    75%{background-color: #419b42; left: 0px; top: 200px}
+    100%{background-color: #a8ffd7; left: 0px; top: 0px}
+  }
